@@ -1,0 +1,55 @@
+.carousel-container{
+    margin-top: 20px;
+    margin-bottom: 150px;
+    .shop-heading {
+        margin-left: 47%;
+        translate: (-50%,0);
+    }
+
+    .category-image {
+        position: relative;
+    }
+
+}
+
+.swiper-slide {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.slide {
+    position: relative;
+    
+    
+}
+
+
+
+.image-hover-content {
+    opacity: 0;
+    visibility: none;
+    cursor: pointer;
+    background: linear-gradient(0deg, #00000088 30%, #ffffff44 100% );
+    color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    transition-delay: 0.1s;
+    transition: all 0.3s ease;
+    justify-content: center;
+
+    &:hover {
+        opacity: 1;
+    }
+ 
+}

@@ -1,0 +1,10 @@
+.cart-items {
+    max-height: 450px;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: inline-block;
+    .button-div{ 
+        padding: 10px;
+    }
+}

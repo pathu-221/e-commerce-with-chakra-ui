@@ -1,0 +1,12 @@
+footer {
+    background-color: teal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    color: white;
+
+    .copyright-section {
+        float: left;
+    }
+}

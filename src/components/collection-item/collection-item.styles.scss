@@ -1,0 +1,39 @@
+.card-container {
+    cursor: pointer;
+    width: 336px;
+    padding: 1%;
+    flex-grow: 1;
+    flex-basis: 23%;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px -6px #222;
+    transition: ease-out 0.4s;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+.product-image {
+    object-fit: cover;
+}
+
+.bottom-contents {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+
+}
+.card-contents {
+    padding-left: 10px;
+}
+
+.cart-icon {
+    cursor: pointer;
+    align-self: center;
+}
+.icon {
+    height: 25px;
+}
+
+.heading-price {
+    display: flex;
+    flex-direction: column;
+}

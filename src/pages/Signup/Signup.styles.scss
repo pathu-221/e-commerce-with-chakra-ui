@@ -1,0 +1,19 @@
+.signup-page {
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    background-color: darkgray;
+    justify-content: center;
+    align-items: center;
+
+    .signin{
+        color: teal;
+        margin-left: 10px;
+    }
+
+}
+
+form {
+    margin: 0;
+    padding: 0;
+}

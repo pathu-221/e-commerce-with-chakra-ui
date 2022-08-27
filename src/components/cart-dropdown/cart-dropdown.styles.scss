@@ -1,0 +1,25 @@
+.collection-container{
+    display: flex;
+    width: 250px;
+
+    .product-image {
+        max-height: 140px;
+        width: 80px;
+        object-fit: contain;
+    }
+
+    .product-title {
+        margin: 4px;
+    }
+    .product-content {
+        display: grid;
+        width: 100%;
+    }
+
+    .priceandquantity{
+        display: flex;
+        justify-content: space-around;
+        padding-left: 0;
+    }
+}
+

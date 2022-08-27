@@ -1,0 +1,49 @@
+.nav-container {
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+
+    // .title{
+    //     align-self: center;
+    //     font-size: 30px;
+    //     font-weight: 400;
+    //     margin-left: 20px;
+    // }
+}
+
+.logo {
+    display: flex;
+    margin: 20px;
+    cursor: pointer;
+    margin-left: 50px;
+}
+
+.logo-image {
+    object-fit: contain;
+    max-height: 50px;
+}
+    
+
+.links {
+    display: flex;
+    list-style-type: none;
+    position: relative;
+
+    .text{
+        font-size: 10px;
+        position: absolute;
+        top: 13px;
+        right: 52px;
+    }
+
+    li {
+        margin-right: 40px;
+        &:hover{
+            cursor: pointer;
+            font-weight: 600;
+        }
+    }
+    
+}
