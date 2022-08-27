@@ -12,7 +12,7 @@ import { selectProducts } from '../../redux/products/products.selectors';
 import { Spinner } from '@chakra-ui/react';
 import './collection-overview.styles.scss';
 import { useState } from 'react';
-import { getcategoryProducts } from '../../services/addProductstodatabase';
+// import { getcategoryProducts } from '../../services/addProductstodatabase';
 
 function CollectionOverview({ category, reduxGetProducts, products }) {
 

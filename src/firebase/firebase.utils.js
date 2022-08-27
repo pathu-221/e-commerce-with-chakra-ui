@@ -1,6 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { doc, getFirestore, setDoc, addDoc, serverTimestamp, collection, getDoc} from "firebase/firestore";
+import { doc, getFirestore, setDoc, serverTimestamp, getDoc} from "firebase/firestore";
 
 import { getAuth, 
   GoogleAuthProvider, 
@@ -35,7 +34,7 @@ export const addUserToDatabase = async (user, additionalData) => {
    const docRef = doc(db, `user/${user.uid}`);
    const snapShot = await getDoc(docRef);
    if(!snapShot.exists()){
-    const docRef = await setDoc(doc(db, `user`,`${user.uid}`), {
+      await setDoc(doc(db, `user`,`${user.uid}`), {
       uid: user.uid,
       displayName: user.displayName ? user.displayName : additionalData.displayName,
       email: user.email,
@@ -54,5 +53,3 @@ export const signInwithEmail = (email, password) => {
 export const signout = () => auth.signOut();
 
 export const signInwithGoogle = () => signInWithPopup(auth, provider);
-
-const analytics = getAnalytics(app);
