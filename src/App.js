@@ -35,7 +35,7 @@ class App extends Component {
       if(data.length > 9) data = data.slice(0, -4);
       getProductCategories(data);
       // addcollection('categories', data);
-    });
+    }).catch(error => alert(error.message));
     
     // await getCollectionCategories().then(data => 
     //   getProductCategories(data));

@@ -23,7 +23,7 @@ function CollectionOverview({ category, reduxGetProducts, products }) {
     .then(data => {
       if(data.length > 32) data = data.slice(0, 32);
       reduxGetProducts(data);
-    });
+    }).catch(error => alert(error.message));
     // getcategoryProducts(category.name).then(data => reduxGetProducts(data));
     // addProductstodatabase('categories', category.name, products);
     isLoaded(true);

@@ -1,15 +1,14 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { doc, getFirestore, setDoc, addDoc, serverTimestamp, collection} from "firebase/firestore";
+import { doc, getFirestore, setDoc, addDoc, serverTimestamp, collection, getDoc} from "firebase/firestore";
 
 import { getAuth, 
   GoogleAuthProvider, 
   signInWithPopup, 
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword, 
-  updateProfile,
-  getAdditionalUserInfo} from "firebase/auth";
-import { FaTruckMonster } from "react-icons/fa";
+} from "firebase/auth";
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyAkySmt0Xoj_kDthQaZ9KoiXw0kH-7Ne_8",
@@ -33,12 +32,17 @@ createUserWithEmailAndPassword(auth, email, password)
 };
 
 export const addUserToDatabase = async (user, additionalData) => {
-   const docRef = await addDoc(collection(db, "user"), {
-    displayName: user.displayName ? user.displayName : additionalData.displayName,
-    email: user.email,
-    createdAt: serverTimestamp(),
-    cart: [],
-  },{merge: true});
+   const docRef = doc(db, `user/${user.uid}`);
+   const snapShot = await getDoc(docRef);
+   if(!snapShot.exists()){
+    const docRef = await setDoc(doc(db, `user`,`${user.uid}`), {
+      uid: user.uid,
+      displayName: user.displayName ? user.displayName : additionalData.displayName,
+      email: user.email,
+      createdAt: serverTimestamp(),
+      cart: [],
+    },{merge: true});
+   }
 }
 
 
