@@ -4,7 +4,7 @@ import image from '../../assets/logo2.jpg';
 
 const StripeButton = ({ total_price }) => {
     const priceForStripe = total_price * 100;
-    const key = 'pk_test_51LBz35SCuHaNP8RmJ1XifOanhTuuQGSQCPLTfNyLtZY6QcaG3Vzb7iotw3vSlhJRNl2oHikSGd17xOoi05XxCoVa00auOSwC0E';
+    const key = 'YOUR_API_KEY';
     const token = (token) =>{
         alert('payment Successful');
         console.log(token);
